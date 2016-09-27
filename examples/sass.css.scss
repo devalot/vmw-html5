@@ -1,0 +1,20 @@
+$background-color: #eee;
+$foreground-color: #000;
+
+/* This is interesting */
+table.spec {
+  border: 1px;
+  color: $foreground-color;
+  background-color: $background-color;
+
+  tr {
+    padding: 5px;
+  }
+
+  animation: {
+    name: foo;
+    duration: 2s;
+  }
+}
+
+p { padding: 10px;}
