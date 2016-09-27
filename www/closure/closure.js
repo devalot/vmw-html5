@@ -12,6 +12,15 @@
 //
 ClosureExercise = function() {
 
-  // Your code here.
+  var temp = 0; /* Or any initial value you want */
 
+  return {
+    setTemp: function(t) {
+      temp = t;
+    },
+
+    getTemp: function() {
+      return temp;
+    },
+  };
 };
