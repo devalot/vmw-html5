@@ -25,7 +25,35 @@
 //     /api/artists/N/albums
 //
 (function() {
+  var Display = function(document, element) {
+    this.document = document;
+    this.element = element;
+  };
 
-  // Your code here.
+  Display.prototype.show = function(artists) {
+    var self = this; // NOTE: WHAT IS THIS FOR?
+    self.element.innerHTML = "";
 
+    artists.forEach(function(artist) {
+      var li = self.document.createElement("li");
+      li.textContent = artist.name;
+      self.element.appendChild(li);
+    });
+  };
+
+  var display = new Display(document, document.getElementById("artists"));
+  var button  = document.querySelector("button");
+
+  button.addEventListener("click", function() {
+    var request = new XMLHttpRequest();
+
+    request.addEventListener("load", function() {
+      if (request.status >= 200 && request.status < 300) {
+        display.show(JSON.parse(request.responseText));
+      }
+    });
+
+    request.open("GET", "/api/artists");
+    request.send();
+  });
 })();
