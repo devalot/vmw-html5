@@ -17,7 +17,7 @@
    element and place a black 1 pixel border along its bottom edge.
 
 */
-
+#products ul:first-of-type { border-bottom: 1px solid black; }
 
 
 /*############################################################################*/
@@ -27,7 +27,7 @@
    element and change the text color to brown.
 
 */
-
+#products p:last-of-type { color: brown; }
 
 
 /*############################################################################*/
@@ -37,3 +37,4 @@
    element and change the text color to green.
 
 */
+#products p:first-of-type { color: green; }

@@ -21,7 +21,8 @@
     2) Select form inputs that are number inputs and change their
        width to 5em.
 */
-
+input[type="text"]   { width: 20em; }
+input[type="number"] { width: 5em;  }
 
 
 /*############################################################################*/
@@ -34,7 +35,7 @@
 
      2) The href attribute for the link starts with a hash (#).
 */
-
+a:hover[href^="#"] { color: orange; }
 
 
 /*############################################################################*/
@@ -44,7 +45,7 @@
    "salesforce" and make their background color darkblue.
 
 */
-
+a[href*="salesforce"] { background-color: darkblue; }
 
 
 /*############################################################################*/
@@ -54,7 +55,7 @@
    change their font weight to bold.
 
 */
-
+[data-product-id] { font-weight: bold; }
 
 
 /*############################################################################*/
@@ -65,3 +66,4 @@
    background color of matching elements to "hotpink".
 
 */
+.product[data-keywords~="hot"] { background-color: hotpink; }

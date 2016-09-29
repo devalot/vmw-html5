@@ -14,8 +14,7 @@
    Select every other table row (even rows) and change their
    background color to #eee.
 */
-
-
+tbody tr:nth-child(even) { background-color: #eee; }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -23,7 +22,7 @@
    Select the last three table rows and change their font weight to
    bold.
 */
-
+tbody tr:nth-last-child(-n+3) { font-weight: bold; }
 
 
 /*############################################################################*/
@@ -37,7 +36,8 @@
      2) Change the background color for the last four list items to
         orange.
 */
-
+article ul:last-of-type :nth-child(-n+4) { background-color: yellow; }
+article ul:last-of-type :nth-child(n+5)  { background-color: orange; }
 
 
 /*############################################################################*/
@@ -47,7 +47,7 @@
    item, starting with the first item, and make the text color red.
    Lists with a single list item should not be affected.
 */
-
+li:nth-child(3n+1):not(:only-child) { color: red; }
 
 
 /*############################################################################*/
@@ -59,3 +59,10 @@
 
      border-right: 1px solid black;
 */
+tbody tr:nth-child(4n) td:first-child {
+  text-align: right;
+  border-right: 1px solid black;
+}
+
+
+nav[lang|="en"] { border: 1px solid red; }

@@ -15,7 +15,7 @@
    border around them.
 
 */
-
+input:focus { border: 2px solid blue; }
 
 /*############################################################################*/
 /* Exercise 2:
@@ -24,7 +24,7 @@
 
    Hint: text-decoration: line-through;
 */
-
+input:disabled { text-decoration: line-through; }
 
 /*############################################################################*/
 /* Exercise 3:
@@ -34,7 +34,7 @@
 
    Hint: Paragraphs inside tables should not be affected.
 */
-
+article > p::first-letter { font-size: 2em; }
 
 /*############################################################################*/
 /* Exercise 4:
@@ -45,3 +45,4 @@
 
    Hint: Only style the user selection if it's in a paragraph.
 */
+p::selection { color: #fff; background-color: #009; }
